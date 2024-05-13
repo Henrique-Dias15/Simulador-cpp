@@ -76,11 +76,11 @@ Personagem *Simulador::proximoPersonagem(vector<Personagem *> equipe)
     int contador = 0;
     while (contador < tamanho)
     {
+        contador = std::rand() % tamanho;
         if (equipe[contador]->getVida() > 0)
         {
             return equipe[contador];
         }
-        contador++;
     }
 
     return nullptr;
